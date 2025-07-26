@@ -120,11 +120,13 @@ function App() {
   const [isGuest, setIsGuest] = useState(false);
 
   useEffect(() => {
+    // Simple check for token presence - no validation to prevent blank screen
     const token = localStorage.getItem('access_token');
     setIsAuthenticated(!!token);
   }, []);
 
   const handleLogin = (opts) => {
+    console.log('Login called with:', opts);
     if (opts && opts.isGuest) {
       setIsGuest(true);
       setIsAuthenticated(false);
@@ -139,6 +141,8 @@ function App() {
     setIsAuthenticated(false);
     setIsGuest(false);
   };
+
+  console.log('App render - isAuthenticated:', isAuthenticated, 'isGuest:', isGuest);
 
   return (
     <>

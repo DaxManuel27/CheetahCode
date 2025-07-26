@@ -57,7 +57,7 @@ function Login({ onLogin }) {
           onChange={e => setEmail(e.target.value)}
           required
           style={{ display: 'block', width: '100%', marginBottom: 8 }}
-        />  ``
+        />
         <input
           type="password"
           placeholder="Password"
@@ -72,7 +72,7 @@ function Login({ onLogin }) {
       <div style={{ textAlign: 'center' }}>
         <button type="button" onClick={() => setShowRegister(true)} style={{ marginTop: 8 }}>
           Don&apos;t have an account? Register
-        </button>``
+        </button>
         <button type="button" onClick={() => onLogin && onLogin({ isGuest: true })} style={{ marginTop: 8, marginLeft: 8 }}>
           Play as Guest
         </button>

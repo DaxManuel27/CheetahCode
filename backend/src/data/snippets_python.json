@@ -1,0 +1,10 @@
+[
+  { "code": "def greet(name):\n    return f'Hello, {name}!'" },
+  { "code": "sum = lambda a, b: a + b" },
+  { "code": "for i in range(10):\n    print(i)" },
+  { "code": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    def greet(self):\n        print(f'Hi, I am {self.name} and I am {self.age} years old.')" },
+  { "code": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        print(a)\n        a, b = b, a + b" },
+  { "code": "numbers = [1, 2, 3, 4, 5]\nsquares = [x**2 for x in numbers]\nprint(squares)" },
+  { "code": "try:\n    with open('file.txt', 'r') as f:\n        content = f.read()\nexcept FileNotFoundError:\n    print('File not found.')" },
+  { "code": "import math\ndef area_of_circle(r):\n    return math.pi * r ** 2\nprint(area_of_circle(5))" }
+] 

@@ -1,0 +1,10 @@
+[
+  { "code": "#include <stdio.h>\n\nint main() {\n  printf(\"Hello, World!\\n\");\n  return 0;\n}" },
+  { "code": "int sum(int a, int b) {\n  return a + b;\n}" },
+  { "code": "for (int i = 0; i < 10; i++) {\n  printf(\"%d\\n\", i);\n}" },
+  { "code": "struct Person {\n  char name[50];\n  int age;\n};\n\nvoid greet(struct Person *p) {\n  printf(\"Hi, I am %s and I am %d years old.\\n\", p->name, p->age);\n}" },
+  { "code": "void fibonacci(int n) {\n  int a = 0, b = 1, temp;\n  for (int i = 0; i < n; i++) {\n    printf(\"%d\\n\", a);\n    temp = a;\n    a = b;\n    b = temp + b;\n  }\n}" },
+  { "code": "int numbers[] = {1, 2, 3, 4, 5};\nfor (int i = 0; i < 5; i++) {\n  printf(\"%d\\n\", numbers[i] * numbers[i]);\n}" },
+  { "code": "#include <stdio.h>\n\nint main() {\n  FILE *file = fopen(\"file.txt\", \"r\");\n  char line[100];\n  if (file) {\n    while (fgets(line, sizeof(line), file)) {\n      printf(\"%s\", line);\n    }\n    fclose(file);\n  } else {\n    printf(\"File not found.\\n\");\n  }\n  return 0;\n}" },
+  { "code": "double areaOfCircle(double r) {\n  return 3.141592653589793 * r * r;\n}" }
+] 

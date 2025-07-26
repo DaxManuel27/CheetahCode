@@ -1,0 +1,10 @@
+[
+  { "code": "#include <iostream>\n\nint main() {\n  std::cout << \"Hello, World!\\n\";\n  return 0;\n}" },
+  { "code": "int sum(int a, int b) {\n  return a + b;\n}" },
+  { "code": "for (int i = 0; i < 10; i++) {\n  std::cout << i << std::endl;\n}" },
+  { "code": "class Person {\npublic:\n  std::string name;\n  int age;\n  Person(std::string n, int a) : name(n), age(a) {}\n  void greet() {\n    std::cout << \"Hi, I am \" << name << \" and I am \" << age << \" years old.\\n\";\n  }\n};" },
+  { "code": "void fibonacci(int n) {\n  int a = 0, b = 1;\n  for (int i = 0; i < n; i++) {\n    std::cout << a << std::endl;\n    int temp = a;\n    a = b;\n    b = temp + b;\n  }\n}" },
+  { "code": "std::vector<int> numbers = {1, 2, 3, 4, 5};\nfor (int x : numbers) {\n  std::cout << x * x << std::endl;\n}" },
+  { "code": "#include <fstream>\n#include <string>\n\nint main() {\n  std::ifstream file(\"file.txt\");\n  std::string line;\n  if (file.is_open()) {\n    while (getline(file, line)) {\n      std::cout << line << std::endl;\n    }\n    file.close();\n  } else {\n    std::cout << \"File not found.\\n\";\n  }\n  return 0;\n}" },
+  { "code": "double areaOfCircle(double r) {\n  return 3.141592653589793 * r * r;\n}" }
+] 

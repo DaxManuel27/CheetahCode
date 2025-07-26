@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "language": "python",
+    "code": "def greet(name):\n\tprint(f'Hello, {name}!')"
+  },
+  {
+    "id": 2,
+    "language": "python",
+    "code": "for i in range(5):\n\tprint(i)"
+  },
+  {
+    "id": 3,
+    "language": "python",
+    "code": "numbers = [1, 2, 3, 4, 5]\nsum_numbers = sum(numbers)\nprint(sum_numbers)"
+  },
+  {
+    "id": 4,
+    "language": "python",
+    "code": "class Animal:\n\tdef __init__(self, name):\n\t\tself.name = name\n\tdef speak(self):\n\t\tprint(f'{self.name} makes a sound')"
+  },
+  {
+    "id": 5,
+    "language": "python",
+    "code": "if __name__ == '__main__':\n\tgreet('World')"
+  }
+]

@@ -65,8 +65,24 @@ function TypingArea({ isGuest }) {
         ...getAuthHeaders()
       }
     })
-      .then(res => res.json())
-      .then(data => setSnippet(data.code));
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then(data => {
+        if (data && data.code) {
+          setSnippet(data.code);
+        } else {
+          console.error('Invalid snippet data:', data);
+          setSnippet('// Error loading snippet');
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching snippet:', error);
+        setSnippet('// Error loading snippet');
+      });
   }, [selectedLanguage]);
 
   useEffect(() => {

@@ -2,6 +2,23 @@
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
+  "functions": {
+    "api/auth/login.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/auth/profile.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/auth/signup.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/snippet/languages.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/snippet/random.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",

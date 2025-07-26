@@ -4,7 +4,7 @@
   "framework": "vite",
   "functions": {
     "api/**/*.js": {
-      "runtime": "nodejs18.x"
+      "runtime": "vercel-php@0.6.0"
     }
   },
   "rewrites": [

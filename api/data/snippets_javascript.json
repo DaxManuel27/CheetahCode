@@ -1,25 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default async function handler(req, res) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  try {
-    const dataDir = path.join(__dirname, '../data');
-    const files = fs.readdirSync(dataDir);
-    
-    const langs = files
-      .filter(f => f.startsWith('snippets_') && f.endsWith('.json'))
-      .map(f => f.replace('snippets_', '').replace('.json', ''));
-    
-    res.json(langs);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to list languages' });
-  }
-}
+[
+  { "code": "function greet(name) {\n  return `Hello, ${name}!`;\n}" },
+  { "code": "const sum = (a, b) => a + b;" },
+  { "code": "for (let i = 0; i < 10; i++) {\n  console.log(i);\n}" },
+  { "code": "class Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n  greet() {\n    console.log(`Hi, I am ${this.name} and I am ${this.age} years old.`);\n  }\n}" },
+  { "code": "function fibonacci(n) {\n  let a = 0, b = 1;\n  for (let i = 0; i < n; i++) {\n    console.log(a);\n    [a, b] = [b, a + b];\n  }\n}" },
+  { "code": "const numbers = [1, 2, 3, 4, 5];\nconst squares = numbers.map(x => x * x);\nconsole.log(squares);" },
+  { "code": "try {\n  const data = localStorage.getItem('key');\n  if (!data) throw new Error('No data');\n  console.log(data);\n} catch (e) {\n  console.error(e.message);\n}" },
+  { "code": "function areaOfCircle(r) {\n  return Math.PI * r * r;\n}\nconsole.log(areaOfCircle(5));" }
+] 

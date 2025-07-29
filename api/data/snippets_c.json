@@ -7,4 +7,4 @@
     { "code": "int numbers[] = {1, 2, 3, 4, 5};\nfor (int i = 0; i < 5; i++) {\n  printf(\"%d\\n\", numbers[i] * numbers[i]);\n}" },
     { "code": "#include <stdio.h>\n\nint main() {\n  FILE *file = fopen(\"file.txt\", \"r\");\n  char line[100];\n  if (file) {\n    while (fgets(line, sizeof(line), file)) {\n      printf(\"%s\", line);\n    }\n    fclose(file);\n  } else {\n    printf(\"File not found.\\n\");\n  }\n  return 0;\n}" },
     { "code": "double areaOfCircle(double r) {\n  return 3.141592653589793 * r * r;\n}" }
-  ] 
+  ]     

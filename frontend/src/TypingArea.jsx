@@ -49,22 +49,18 @@ function TypingArea({ isGuest }) {
 
   // Fetch available languages on mount
   useEffect(() => {
-    fetch('/api/snippet/languages', {
-      headers: {
-        ...getAuthHeaders()
-      }
-    })
+    fetch('/api/snippet/languages')
       .then(res => res.json())
-      .then(data => setLanguages(data));
+      .then(data => setLanguages(data))
+      .catch(error => {
+        console.error('Error fetching languages:', error);
+        setLanguages(['javascript']); // fallback
+      });
   }, []);
 
   // Fetch a random snippet when language changes
   useEffect(() => {
-    fetch(`/api/snippet/random?language=${selectedLanguage}`, {
-      headers: {
-        ...getAuthHeaders()
-      }
-    })
+    fetch(`/api/snippet/random?language=${selectedLanguage}`)
       .then(res => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -339,7 +335,14 @@ function TypingArea({ isGuest }) {
             onClick={() => {
               fetch(`/api/snippet/random?language=${selectedLanguage}`)
                 .then(res => res.json())
-                .then(data => setSnippet(data.code));
+                .then(data => {
+                  if (data && data.code) {
+                    setSnippet(data.code);
+                  }
+                })
+                .catch(error => {
+                  console.error('Error fetching new snippet:', error);
+                });
             }}
           >
             New Code Snippet

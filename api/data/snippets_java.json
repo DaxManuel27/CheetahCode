@@ -1,1 +1,10 @@
- 
+[
+    { "code": "public class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Hello, World!\");\n  }\n}" },
+    { "code": "int sum(int a, int b) {\n  return a + b;\n}" },
+    { "code": "for (int i = 0; i < 10; i++) {\n  System.out.println(i);\n}" },
+    { "code": "class Person {\n  String name;\n  int age;\n  Person(String name, int age) {\n    this.name = name;\n    this.age = age;\n  }\n  void greet() {\n    System.out.println(\"Hi, I am \" + name + \" and I am \" + age + \" years old.\");\n  }\n}" },
+    { "code": "void fibonacci(int n) {\n  int a = 0, b = 1;\n  for (int i = 0; i < n; i++) {\n    System.out.println(a);\n    int temp = a;\n    a = b;\n    b = temp + b;\n  }\n}" },
+    { "code": "int[] numbers = {1, 2, 3, 4, 5};\nfor (int x : numbers) {\n  System.out.println(x * x);\n}" },
+    { "code": "try {\n  FileReader fr = new FileReader(\"file.txt\");\n  BufferedReader br = new BufferedReader(fr);\n  String line;\n  while ((line = br.readLine()) != null) {\n    System.out.println(line);\n  }\n  br.close();\n} catch (IOException e) {\n  System.out.println(\"File not found.\");\n}" },
+    { "code": "double areaOfCircle(double r) {\n  return Math.PI * r * r;\n}" }
+  ] 

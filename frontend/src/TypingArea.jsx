@@ -360,4 +360,4 @@ function TypingArea({ isGuest }) {
   );
 }
 
-export default TypingArea; 
+export default TypingArea;
